@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "ad3033d4-4c92-48e7-b8c1-72df5e5985c0",
+		"name": "DWDS 8.1 - Libros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15409071"
+	},
+	"item": [
+		{
+			"name": "Obtener libro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/books/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Modif parcial libro",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"polaris11\",\r\n    \"autor\":\"Maicol\",\r\n    \"categoria\": \"Novela\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/books/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener libro con filtro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/books?category=Novela&author=Maicol",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Novela"
+						},
+						{
+							"key": "author",
+							"value": "Maicol"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los libros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8088/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir libro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"titulo\": \"polar22is1221\",\r\n        \"autor\": \"Maicol222211\",\r\n        \"fechaPublicacion\": \"1949-06-08\",\r\n        \"categoria\": \"Distopía\",\r\n        \"isbn\": \"978022222524935\",\r\n        \"valoracion\": 4.7,\r\n        \"visible\": true,\r\n        \"imagen\": \"https://example.com/1984.jpg\",\r\n        \"precio\": 19.99,\r\n        \"cantidad\": 40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/books"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar libro",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8088/books/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Modif Total libro",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"polar2is11\",\r\n    \"autor\": \"Ma2icol\",\r\n    \"fechaPublicacion\": \"1949-06-08\",\r\n    \"categoria\": \"Distopía\",\r\n    \"isbn\": \"97804251524935\",\r\n    \"valoracion\": 4.7,\r\n    \"visible\": true,\r\n    \"imagen\": \"https://example.com/1984.jpg\",\r\n    \"precio\": 12.99,\r\n    \"cantidad\": 40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8088/books/4"
+			},
+			"response": []
+		}
+	]
+}
